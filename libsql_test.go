@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	"github.com/mattn/go-sqlite3"
+	_ "github.com/tursodatabase/libsql-client-go/libsql"
 	"gorm.io/gorm"
 )
 
