@@ -98,6 +98,16 @@ func TestDialector(t *testing.T) {
 			query:        "SELECT my_custom_function()",
 			querySuccess: true,
 		},
+		{
+			description: "libSQL Custom driver",
+			dialector: &Dialector{
+				DriverName: "libsql",
+				DSN:        InMemoryDSN,
+			},
+			openSuccess:  true,
+			query:        "SELECT 1",
+			querySuccess: true,
+		},
 	}
 	for rowIndex, row := range rows {
 		t.Run(fmt.Sprintf("%d/%s", rowIndex, row.description), func(t *testing.T) {
