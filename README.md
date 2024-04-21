@@ -20,7 +20,7 @@ import (
 	"time"
 
 	"github.com/tursodatabase/go-libsql"
-  sqlite "<path to this package>"
+  	sqlite "https://github.com/ytsruh/gorm-libsql"
 	"gorm.io/gorm"
 )
 
@@ -66,7 +66,7 @@ import (
 
 	_ "github.com/tursodatabase/libsql-client-go/libsql"
 	"gorm.io/gorm"
-	sqlite "<path to this package>"
+	sqlite "https://github.com/ytsruh/gorm-libsql"
 )
 
 dburl := os.Getenv("DATABASE_URL")
