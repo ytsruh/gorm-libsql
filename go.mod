@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/mattn/go-sqlite3 v1.14.17
 	github.com/tursodatabase/libsql-client-go v0.0.0-20240416075003-747366ff79c4
-	gorm.io/gorm v1.25.7-0.20240204074919-46816ad31dde
+	gorm.io/gorm v1.25.9
 )
 
 require (
