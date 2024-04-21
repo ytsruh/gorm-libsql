@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	"github.com/mattn/go-sqlite3"
+	_ "github.com/tursodatabase/libsql-client-go/libsql"
 	"gorm.io/gorm"
 )
 
@@ -95,6 +96,16 @@ func TestDialector(t *testing.T) {
 			},
 			openSuccess:  true,
 			query:        "SELECT my_custom_function()",
+			querySuccess: true,
+		},
+		{
+			description: "libSQL Custom driver",
+			dialector: &Dialector{
+				DriverName: "libsql",
+				DSN:        InMemoryDSN,
+			},
+			openSuccess:  true,
+			query:        "SELECT 1",
 			querySuccess: true,
 		},
 	}
