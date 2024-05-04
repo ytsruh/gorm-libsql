@@ -75,6 +75,7 @@ var err error
 // Pass a DSN or Turso DB url to Gorm. The url must also include an authToken as a query parameter
 conn, err := gorm.Open(sqlite.New(sqlite.Config{
 	DSN:        dburl,
+	DriverName: "libsql",
 }), &gorm.Config{})
 
 if err != nil {
