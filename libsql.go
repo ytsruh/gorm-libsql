@@ -5,9 +5,9 @@ import (
 	"database/sql"
 	"strconv"
 
-	"gorm.io/gorm/callbacks"
-
+	_ "github.com/mattn/go-sqlite3"
 	"gorm.io/gorm"
+	"gorm.io/gorm/callbacks"
 	"gorm.io/gorm/clause"
 	"gorm.io/gorm/logger"
 	"gorm.io/gorm/migrator"
@@ -15,7 +15,7 @@ import (
 )
 
 // DriverName is the default driver name for SQLite / libSQL.
-const DriverName = "libsql"
+const DriverName = "sqlite3"
 
 type Dialector struct {
 	DriverName string
