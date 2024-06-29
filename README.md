@@ -1,5 +1,7 @@
 # GORM libSQL Driver
 
+UPDATE - I'm archiving this repo as it was always mean tot be a temporary solution. A perm fix has been merged into the [Gorm SQLite](https://github.com/go-gorm/sqlite) via this [PR](https://github.com/go-gorm/sqlite/pull/185) althought this is some controversy around this change so please read before blindly using.
+
 An unofficial driver for using libSQL/Turso with Gorm.
 
 This is a fork of the [official Gorm SQLite](https://github.com/go-gorm/sqlite) driver changed to work with libSQL/Turso. The primary change is the introduction of a Config struct.
